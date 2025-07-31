@@ -259,8 +259,8 @@ read123  99  chr1  1000  60  76M  =  1076  152  ACGTACGT...  IIIIIII...  NM:i:0 
 | 3   | RNAME | `chr1`                           | 参考序列的名称（染色体名）                     
 | 4   | POS   | `1000`                           | read在参考序列上的起始位置（1-based）          
 | 5   | MAPQ  | `60`                             | 比对质量（Mapping Quality），数值越高越可信     
-| 6   | CIGAR | `76M`                            | 比对方式：76个碱基匹配（M）                   
-| 7   | RNEXT | `=`                              | 配对read比对到的参考序列（同chr1）             
+| 6   | CIGAR | `76M`                            | 比对方式。 • 76M：完全匹配 76 个碱基； 10M1I65M：（10M，match）匹配10个→（1I，insert）插入1个碱基→再匹配65个                  
+| 7   | RNEXT | `=`                              | 配对read（即双端测序的另一段read）比对到的参考序列（同chr1）             
 | 8   | PNEXT | `1076`                           | 配对read的位置                         
 | 9   | TLEN  | `152`                            | 两条read之间的插入片段长度                   
 | 10  | SEQ   | `ACGT...`                        | 原始序列（与FASTQ一致）                    
